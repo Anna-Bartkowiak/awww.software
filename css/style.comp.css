@@ -193,7 +193,7 @@ body {
 
 .header {
   height: 90rem;
-  background-image: url(../../img/bg2-kopia.jpg);
+  background-image: url(../img/bg2-kopia.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -273,7 +273,7 @@ body {
   background-color: #fff; }
 
 .section-contact {
-  background-image: url(../../img/bg1.jpg);
+  background-image: url(../img/bg1.jpg);
   background-position: center;
   background-size: cover;
   color: #fff; }
