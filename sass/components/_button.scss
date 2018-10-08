@@ -1,0 +1,55 @@
+.btn {
+    padding: 2rem 4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $color-white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+
+    &__violet {
+        background-color: $color-violet;
+        letter-spacing: $default-letter-spacing-small;
+        width: 100%;
+
+        & span {
+            color: $color-blue;
+            margin-left: 1rem;
+            transition: margin-left .2s;
+        }
+
+        &:hover {
+            background-color: $color-light-violet;
+
+            span {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &--light-violet {
+        background-color: $color-light-violet;
+
+        &:hover {
+            background-color: $color-dark-violet;
+        }
+    }
+
+    &__btn-round-blue {
+        border: 1px solid $color-blue;
+        border-radius: 100px;
+    }
+
+    &__btn-round-green {
+        border: 1px solid $color-green;
+        border-radius: 100px;
+        background-color: inherit;
+        color: $color-green;
+
+        &:hover {
+            background-color: $color-green;
+            color: $color-white;
+        }
+    }
+}

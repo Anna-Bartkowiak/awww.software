@@ -1,0 +1,28 @@
+.technology {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__text {
+        &--right {
+            padding-right: 6rem;
+            padding-left: 2rem;
+        }
+
+        &--left {
+            padding-right: 2rem;
+            padding-left: 6rem;
+        }
+    }
+
+    &__img {
+        flex: 0 0 50%;
+        padding: 11.5rem 0;
+        width: 100%;
+
+        & img {
+            max-width: 63rem;
+        }
+    }
+}

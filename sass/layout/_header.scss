@@ -1,0 +1,47 @@
+.header {
+    height: 90rem;
+    background-image: url(../../img/bg2-kopia.jpg);
+    background-position: top center;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+
+.header-box {
+    height: 78rem;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3fr 10rem;
+    grid-template-columns: 1fr;
+    color: $color-white;
+
+    &__text-box {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+    }
+
+    &__heading {
+        margin: 20rem 0 9rem 0;
+    }
+
+    &__lotto-bar {
+        height: 10rem;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+    }
+
+    &__lotto {
+        height: 6rem;
+        width: 9rem;
+    }
+
+    &__btn-box {
+
+        & :not(:last-child) {
+            margin-right: 1rem;
+        }
+
+    }
+}
