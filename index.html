@@ -9,6 +9,7 @@
     <title>Awww.software</title>
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="icon" type="image/svg" href="img/awww-short.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -99,7 +100,6 @@
                 <div class="about__box-1">
                     <div class="about__box">
                         <img src="img/awww-web.svg" class="about-box__icon" alt="Web development">
-                        <i class="about-box__icon"></i>
                         <h3 class="heading-tertiary">Web <br>development</h3>
                         <p class="paragraph-tertiary">
                             Ipsum dolor sit amet consectetur adipisicing elit. Iure exercitationem quod quam repudiandae incidunt?
@@ -194,50 +194,49 @@
                 <div class="contact">
                     <div class="contact__info">
                         <div class="contact__adress">
-                            <div class="form__call-mail">
                                 <p class="paragraph">
                                     al. pokoju 1 (ix) piętro
                                 </p>
                                 <p class="paragraph">
                                     31-548 kraków
                                 </p>
-                            </div>
                         </div>
     
                         <div class="contact__adress">
-                            <div class="contact__call-mail">
-                                <a href="tel:+48504020682" target="_blank" class="contact__anchor">
-                                    <i class="fas fa-phone form__icons"></i>
-                                    +48 504 020 682
-                                </a>
-    
-                                <a href="mailto:join@awww.software" target="_blank" class="contact__anchor">
-                                    <i class="fas fa-envelope form__icons"></i>
-                                    join@awww.software
-                                </a>
-                            </div>
+                                <p>tel. 
+                                    <a href="tel:+48504020682" target="_blank" class="contact__anchor">
+                                        +48 504 020 682
+                                    </a>
+                                </p>
+                                
+                                <p>e-mail: 
+                                    <a href="mailto:join@awww.software" target="_blank" class="contact__anchor">
+                                        join@awww.software
+                                    </a>
+                                </p>
                         </div>
     
                         <div class="contact__social">
-                            <a href="#" class="contact__anchor">
+                            <a href="#">
                                 <i class="fab fa-facebook-f contact__icon"></i>
                             </a>
     
-                            <a href="#" class="contact__anchor">
+                            <a href="#">
                                 <i class="fab fa-youtube contact__icon"></i>
                             </a>
     
-                            <a href="#" class="contact__anchor">
+                            <a href="#">
                                 <i class="fab fa-linkedin-in contact__icon"></i>
                             </a>
     
-                            <a href="#" class="contact__anchor"><i class="fab fa-twitter contact__icon"></i></a>
+                            <a href="#">
+                                <i class="fab fa-twitter contact__icon"></i>
+                            </a>
     
-                            <a href="#" class="contact__anchor">
+                            <a href="#">
                                 <i class="fab fa-instagram contact__icon"></i>
                             </a>
                         </div>
-    
                     </div>
     
                     <div class="contact__form">
@@ -245,38 +244,38 @@
                         <h2 class="heading-secondary contact__heading">Formularz kontaktowy</h2>
 
                         <form class="form" action="/send_form.php" method="post" id="contact_form">
-                            <div class="form__group">
+                            <div class="form__group-name">
                                 <input type="text" name="name" class="form__input" id="name" placeholder="Imię i nazwisko" required>
                                 <label for="name" class="form__label">Imię i nazwisko</label>
                             </div>
     
-                            <div class="form__group">
+                            <div class="form__group-address">
                                 <input type="email" name="email" class="form__input" id="email" placeholder="Adres e-mail" required>
                                 <label for="email" class="form__label">Adres e-mail</label>
                             </div>
     
-                            <div class="form__group">
+                            <div class="form__group-phone">
                                 <input type="number" name="number" class="form__input" id="number" placeholder="Numer telefonu" required>
                                 <label for="number" class="form__label">Numer telefonu</label>
                             </div>
                             
-                            <div class="form__group">
+                            <div class="form__group-topic">
                                 <input type="text" name="topic" class="form__input" id="topic" placeholder="Temat wiadomości" required>
                                 <label for="topic" class="form__label">Temat wiadomości</label>
                             </div>
         
-                            <div class="form__group">
+                            <div class="form__group-txt">
                                 <textarea name="message" id="message" class="form__textarea" rows="3" cols="60" wrap="soft" placeholder="Treść wiadomości" required></textarea>
-                                <label for="message" class="form__label form__label__textarea">Treść wiadomości</label>
+                                <!-- <label for="message" class="form__label form__label__textarea">Treść wiadomości</label> -->
                             </div>
         
-                            <div class="form__group">
+                            <div class="form__group-stat">
                                 <div class="form__status" id="send_form_status"></div>
                             </div>
                             
         
-                            <div class="form__group">
-                                <button type="submit" class="btn btn__btn-round-green">Wyślij wiadomość</button>
+                            <div class="form__group-btn">
+                                <button type="submit" class="btn btn__btn-round-green form__btn">Wyślij wiadomość</button>
                             </div>
                         </form>
                     </div>

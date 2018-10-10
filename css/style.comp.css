@@ -64,7 +64,8 @@ body {
     text-transform: capitalize; }
 
 .heading-secondary {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.1rem;
   padding-bottom: 6rem;
   color: #4b479e; }
 
@@ -151,17 +152,87 @@ body {
       height: 13rem;
       margin: 3.5rem; }
   .about__box-1 {
-    grid-area: box-1;
-    margin: 0 1rem; }
+    grid-area: box-1; }
   .about__box-2 {
-    grid-area: box-2;
-    margin: 0 1rem; }
+    grid-area: box-2; }
   .about__box-3 {
-    grid-area: box-3;
-    margin: 0 1rem; }
+    grid-area: box-3; }
   .about__box-4 {
-    grid-area: box-4;
+    grid-area: box-4; }
+  .about__box-1, .about__box-2, .about__box-3, .about__box-4 {
     margin: 0 1rem; }
+
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 3rem;
+  grid-template-areas: "nam address" "phone topic" "txt txt" "stat stat" "btn btn";
+  justify-content: center;
+  align-items: center; }
+  .form__input, .form__textarea {
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: inherit;
+    padding: .7rem 0;
+    text-transform: uppercase;
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid #F5F5F5;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    outline: none; }
+    @media only screen and (max-width: 56.25em) {
+      .form__input, .form__textarea {
+        width: 100%; } }
+    .form__input:required, .form__textarea:required {
+      box-shadow: none; }
+    .form__input:focus, .form__textarea:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 2px solid #7dbd6e; }
+    .form__input:focus:invalid, .form__textarea:focus:invalid {
+      border-bottom: 2px solid orangered; }
+    .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+      color: #F5F5F5; }
+  .form__label {
+    margin-top: 1.5rem;
+    display: block;
+    transition: all .3s;
+    transform: translateY(-7rem); }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form__status {
+    background-color: transparent;
+    margin-top: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .form__status {
+        text-align: center; } }
+    .form__status .status_ok {
+      color: #7dbd6e; }
+    .form__status .status_err {
+      color: orangered; }
+  .form__btn {
+    text-transform: inherit; }
+  .form__group-name {
+    grid-area: nam; }
+  .form__group-address {
+    grid-area: address; }
+  .form__group-phone {
+    grid-area: phone; }
+  .form__group-topic {
+    grid-area: topic; }
+  .form__group-txt {
+    grid-area: txt; }
+  .form__group-stat {
+    grid-area: stat; }
+  .form__group-btn {
+    grid-area: btn;
+    margin-left: auto; }
 
 .technology {
   display: flex;
@@ -185,21 +256,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0; }
+  padding: 7rem 6rem 0 6rem;
+  text-transform: uppercase; }
+  .contact__info {
+    flex: 1;
+    font-size: 1.6rem; }
+  .contact__adress {
+    margin-bottom: 3rem;
+    line-height: 3rem; }
+  .contact__anchor {
+    text-decoration: none;
+    color: #7dbd6e; }
+  .contact__icon {
+    font-size: 2rem;
+    padding-right: 3rem;
+    line-height: 2rem;
+    color: #fff;
+    transform: scale(1);
+    transition: all .3s;
+    text-decoration: none; }
+    .contact__icon:hover {
+      transform: scale(1.1);
+      color: #7dbd6e; }
   .contact__form {
-    flex: 0 0 65%; }
+    flex: 0 0 58.5%;
+    padding: 5rem 3rem 0 3rem; }
   .contact__heading {
-    color: #fff; }
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: none; }
 
 .header {
-  height: 90rem;
+  height: 100vh;
+  max-height: 90rem;
   background-image: url(../img/bg2-kopia.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
 .header-box {
-  height: 78rem;
+  max-height: 78rem;
+  height: 84vh;
   width: 100%;
   display: grid;
   grid-template-rows: 3fr 10rem;
@@ -208,11 +306,13 @@ body {
   .header-box__text-box {
     width: 50%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: center; }
   .header-box__heading {
-    margin: 20rem 0 9rem 0; }
+    margin-bottom: 9rem; }
   .header-box__lotto-bar {
-    height: 10rem;
+    max-height: 10rem;
+    height: 25vh;
     display: flex;
     justify-content: space-between; }
   .header-box__lotto {
@@ -277,3 +377,5 @@ body {
   background-position: center;
   background-size: cover;
   color: #fff; }
+  .section-contact .footer {
+    padding: 7rem 4rem; }

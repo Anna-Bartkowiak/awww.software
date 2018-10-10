@@ -1,0 +1,122 @@
+.form {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 3rem;
+
+    grid-template-areas: "nam address"
+                        "phone topic"
+                        "txt txt"
+                        "stat stat"
+                        "btn btn";
+
+    justify-content: center;
+    align-items: center;
+    
+
+    &__input,
+    &__textarea {
+        font-size: 1.2rem;
+        font-family: inherit;
+        color: inherit;
+        padding: .7rem 0;
+        text-transform: uppercase;
+        background-color: inherit;
+        border: none;
+        border-bottom: 2px solid $color-primary;
+        width: 100%;
+        display: block;
+        transition: all .3s;
+        outline: none;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &:required {
+            box-shadow: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 2px solid $color-green;
+        }
+
+        &:focus:invalid {
+            border-bottom: 2px solid $color-red;
+        }
+    
+        &::-webkit-input-placeholder {
+            color: $color-primary;
+        }
+    }
+
+    &__label {
+        // font-size: 1.2rem;
+        margin-top: 1.5rem;
+        display: block;
+        transition: all .3s;
+        transform: translateY(-7rem);
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__status {
+        background-color: transparent;
+        margin-top: 3rem;
+
+        @include respond(tab-port) {
+            text-align: center;
+        }
+
+
+        & .status_ok {
+            color: $color-green;
+
+        }
+
+        & .status_err {
+            color: $color-red;
+        }
+    }
+
+    &__btn {
+        text-transform: inherit;
+        // float: right;
+    }
+
+    &__group-name {
+        grid-area: nam;
+    }
+
+    &__group-address {
+        grid-area: address;
+    }
+
+    &__group-phone {
+        grid-area: phone;
+    }
+
+    &__group-topic {
+        grid-area: topic;
+    }
+
+    &__group-txt {
+        grid-area: txt;
+    }
+
+    &__group-stat {
+        grid-area: stat;
+    }
+
+    &__group-btn {
+        grid-area: btn;
+        margin-left: auto;
+    }
+}
