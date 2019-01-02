@@ -1,11 +1,13 @@
 .container {
-    width: 128rem;
+    max-width: 110rem;
+    padding: 0 3rem;
     margin: 0 auto;
     // display: flex;
 
-    @include respond(tab-land) {
-        width: 114rem;
-    }
+    // @include respond(tab-land) {
+    //     width: 114rem;
+    // }
+    @include clearfix
 }
 
 .section-about {
