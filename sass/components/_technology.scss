@@ -4,16 +4,46 @@
     align-items: center;
     text-align: center;
 
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        &__rwd-change-direction {
+            flex-direction: column-reverse;
+        }
+    }
+
     &__text {
         &--right {
             padding-right: 6rem;
             padding-left: 2rem;
+
+            @include respond(tab-port) {
+                padding: 6rem;
+                padding-bottom: 0;
+            }
+
+            @include respond(phone) {
+                padding: 4rem 3rem 0 3rem;
+            }
         }
 
         &--left {
             padding-right: 2rem;
             padding-left: 6rem;
+
+            @include respond(tab-port) {
+                padding: 6rem;
+                padding-bottom: 0;
+            }
+
+            @include respond(phone) {
+                padding: 4rem 3rem 0 3rem;
+            }
         }
+
+        
     }
 
     &__img {
@@ -23,6 +53,16 @@
 
         & img {
             max-width: 63rem;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include respond(tab-port) {
+            padding: 5.5rem 0;
+        }
+
+        @include respond(phone) {
+            padding: 3.5rem 0;
         }
     }
 }

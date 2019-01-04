@@ -5,9 +5,22 @@
     padding: 7rem 6rem 0 6rem;
     text-transform: uppercase;
 
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
+    @include respond(phone) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
     &__info {
         flex: 1;
         font-size: 1.6rem;
+
+        @include respond(phone) {
+            padding-top: 6rem;
+        }
     }
 
     &__adress {
@@ -38,6 +51,14 @@
     &__form {
         flex: 0 0 58.5%;
         padding: 5rem 3rem 0 3rem;
+
+        @include respond(tab-port) {
+            padding-top: 4rem;
+        }
+
+        @include respond(phone) {
+            padding: 4rem 0 0 0;
+        }
     }
 
     &__heading {

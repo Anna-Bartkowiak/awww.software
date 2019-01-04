@@ -5,6 +5,7 @@
     display: flex; 
 
     @include respond(phone) {
+        height: 8rem;
         background-color: $color-violet;
     }
 
